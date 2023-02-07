@@ -1,13 +1,28 @@
 ---
 import BackToTop from '../components/BackToTop.astro';
 import Introduction from '../components/Introduction.astro';
+import Project from '../components/Project.astro';
 import Pssst from '../components/Pssst.astro';
 import Layout from '../layouts/Layout.astro';
+import { projects } from '../projects';
 ---
 
 <Layout title="Welcome to Astro.">
   <main class="">
     <Introduction />
+
+    <div class="flex items-center justify-center py-20">
+      <h2 class="text-5xl font-bold">x-.-*~ Featured Projects ~^,--x</h2>
+    </div>
+    <div id="#projects">
+      {
+        projects &&
+          projects.map((project) => {
+            return <Project {...project} />;
+          })
+      }
+    </div>
+
     <BackToTop />
     <Pssst />
   </main>

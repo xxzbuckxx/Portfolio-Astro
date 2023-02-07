@@ -1,0 +1,13 @@
+---
+export type ProjectHeader = {
+  text: string;
+};
+
+type Props = ProjectHeader;
+
+const { text }: Props = Astro.props;
+---
+
+<h4 class="text-gray">
+  {text}
+</h4>

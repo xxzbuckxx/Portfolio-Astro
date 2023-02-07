@@ -1,49 +1,86 @@
 ---
-export interface Props {
-  title: string;
-  tags: string[]; // todo: enumerate
-  previews: string[]; // todo: list of images to display
-  demo?: string;
-  view?: string;
-  description: string;
-}
+import iconGithub from '../assets/icons/github-black.svg';
 
-const { href, title, body } = Astro.props;
+const tagColors = {
+  fullstack: 'text-[#fc69ff] border-[#fc69ff]',
+  nodejs: 'text-[#2CE58C] border-[#2CE58C]',
+  typescript: 'text-[#2194FE] border-[#2194FE]',
+  react: 'text-[#3ADBFE] border-[#3ADBFE]',
+  aws: 'text-[#E9C60F] border-[#E9C60F]',
+  firebase: 'text-[#e9780f] border-[#e9780f]',
+  threejs: 'text-[#FF99BE] border-[#FF99BE]',
+  c: 'text-[#e7d943] border-[#e7d943]',
+  bash: 'text-[#000] border-[#000]',
+  latex: 'text-[#1eb426] border-[#1eb426]',
+  gm2: 'text-[#68d951] border-[#68d951]',
+  python: 'text-[#d23ce3] border-[#d23ce3]',
+};
+
+type Tag = keyof typeof tagColors;
+
+export type Project = {
+  title: string;
+  description: string;
+  tags: Tag[]; // todo: enumerate
+  previews?: string[]; // todo: list of images to display
+  code?: string;
+  demo?: string;
+};
+
+type Props = Project;
+
+const { title, description, tags, previews, code, demo }: Props = Astro.props;
 ---
 
-<div class="project">
-  <h3><a href="https://under.io" target="_blank">Under.io</a> Metric System</h3>
+<div class="flex flex-col gap-3 py-10">
+  <h3 class="text-4xl font-bold">{title}</h3>
 
   <!-- tags -->
-  <ul class="tags">
-    <li class="tag fullstack">#Fullstack</li>
-    <li class="tag nodejs">#NodeJS</li>
-    <li class="tag typescript">#Typescript</li>
-    <li class="tag react">#React</li>
-    <li class="tag aws">#AWS</li>
+  <ul class="flex gap-3">
+    {
+      tags.map((tag) => {
+        return <li class={`rounded-xl border-2 px-5 text-sm ${tagColors[tag]}`}>{`#${tag}`}</li>;
+      })
+    }
   </ul>
 
   <!-- images -->
-  <div class="project-previews">
-    <img src="./assets/images/UNDER-Dashboard.gif" alt="Under admin dashboard" />
+  <div class="flex">
+    {
+      previews &&
+        previews.map((preview) => {
+          return <img class="h-40" src={preview} alt="" />;
+        })
+    }
   </div>
 
   <!-- view or demo -->
-  <div class="view-buttons">
-    <a href="https://github.com/xxzbuckxx/Blob-Mob" target="_blank">
-      <div class="view-button">
-        View Code<img src="./assets/icons/github-black.svg" alt="Github icon" />
-      </div>
-    </a>
-    <a href="https://xxzbuckxx.github.io/Blob-Mob/" target="_blank">
-      <div class="demo">View Demo</div>
-    </a>
+  <div class="flex gap-3">
+    {
+      code && (
+        <a
+          href="https://github.com/xxzbuckxx/Blob-Mob"
+          target="_blank"
+          class="flex items-center gap-3 rounded-2xl border-2 p-3 py-1"
+        >
+          <p class="text-lg font-bold">View Code</p>
+          <img class="w-8" src={iconGithub} alt="Github icon" />
+        </a>
+      )
+    }
+    {
+      demo && (
+        <a
+          href="https://xxzbuckxx.github.io/Blob-Mob/"
+          target="_blank"
+          class="border-accent flex items-center gap-3 rounded-2xl border-2 p-3 py-1"
+        >
+          <p class="text-accent text-lg font-bold">View Demo</p>
+        </a>
+      )
+    }
   </div>
 
   <!-- description -->
-  <p>
-    At a startup, it is crucial to understand where the buisness is at. That is why I was tasked
-    with building an admin dashboard that displayed important site metrics and allowed easy access
-    of customer data.
-  </p>
+  <p class="text-gray text-lg">{description}</p>
 </div>

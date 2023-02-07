@@ -11,7 +11,7 @@ module.exports = {
   overrides: [
     {
       files: ['*.astro'],
-      plugins: ['astro', 'prettier'],
+      plugins: ['astro'],
       parser: 'astro-eslint-parser',
       parserOptions: {
         parser: '@typescript-eslint/parser',
@@ -19,4 +19,12 @@ module.exports = {
       },
     },
   ],
+  rules: {
+    'tailwindcss/no-custom-classname': [
+      2,
+      {
+        config: 'tailwind.config.cjs',
+      },
+    ],
+  },
 };
