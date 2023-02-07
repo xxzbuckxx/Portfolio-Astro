@@ -1,0 +1,50 @@
+---
+
+import iconEmail from "../assets/icons/email.svg"
+import iconGithub from "../assets/icons/github.svg"
+import iconLinkedIn from "../assets/icons/linkedin.svg"
+import iconArrow from "../assets/icons/arrow.svg"
+
+import meImg from "../assets/images/me-wide.jpg"
+
+---
+
+<div class="flex justify-between items-start">
+  <div class="flex flex-col"> 
+    <div>
+      <h2 class="text-5xl font-bold">Hello,</h2>
+      <h2 class="text-5xl font-bold">I'm Zack Traczyk</h2>
+    </div>
+
+    <div class="h-8"></div> 
+
+    <div class="md:w-[21rem]">
+      <p class="text-xl text-gray">
+        I'm a software engineer and a computer science student at the
+        <b>University of California Santa Cruz</b>.
+      </p>
+      <div class='h-10'></div>
+      <p class="text-xl text-gray"><i>Banana Slugs!</i></p>
+    </div>
+
+    <div class="h-4"></div> 
+
+    <div class='flex align-center justify-between md:flex-col gap-5'>
+      <div class="flex gap-3 -ml-1">
+        <a href="mailto:me@zacktraczyk.com">
+          <img class="w-10" src={iconEmail} alt="Email logo" />
+        </a>
+        <a href="https://github.com/xxzbuckxx">
+          <img class="w-10" src={iconGithub} alt="Github logo" />
+        </a>
+        <a href="https://www.linkedin.com/in/zachary-traczyk-140b541b2">
+          <img class="w-10" src={iconLinkedIn} alt="Linkedin Logo" />
+        </a>
+      </div>
+
+      <a href="#projects"><img class="w-10 rotate-90" src={iconArrow} alt="arrow" /></a>
+    </div>
+
+  </div>
+  <img class="hidden md:block w-[17rem] object-contain" src={meImg}>
+</div>

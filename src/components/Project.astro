@@ -1,0 +1,46 @@
+---
+export interface Props {
+	title: string;
+	tags: String[]; // todo: enumerate
+	previews: String[]; // todo: list of images to display
+	demo?: String;
+	view?: String;
+	description: String;
+}
+
+const { href, title, body } = Astro.props;
+---
+
+<div class="project">
+	<h3><a href="https://under.io" target="_blank">Under.io</a> Metric System</h3>
+
+	<!-- tags -->
+	<ul class="tags">
+		<li class="tag fullstack">#Fullstack</li>
+		<li class="tag nodejs">#NodeJS</li>
+		<li class="tag typescript">#Typescript</li>
+		<li class="tag react">#React</li>
+		<li class="tag aws">#AWS</li>
+	</ul>
+
+	<!-- images -->
+	<div class="project-previews">
+		<img src="./assets/images/UNDER-Dashboard.gif" alt="Under admin dashboard" />
+	</div>
+
+	<!-- view or demo -->
+	<div class="view-buttons">
+		<a href="https://github.com/xxzbuckxx/Blob-Mob" target="_blank">
+			<div class="view-button">View Code<img src="./assets/icons/github-black.svg" alt="Github icon" /></div>
+		</a>
+		<a href="https://xxzbuckxx.github.io/Blob-Mob/" target="_blank">
+			<div class="demo">View Demo</div>
+		</a>
+	</div>
+
+	<!-- description -->
+	<p>
+		At a startup, it is crucial to understand where the buisness is at. That is why I was tasked with building an
+		admin dashboard that displayed important site metrics and allowed easy access of customer data.
+	</p>
+</div>
