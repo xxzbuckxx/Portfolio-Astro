@@ -1,13 +1,14 @@
 ---
 import BackToTop from '../components/BackToTop.astro';
 import Introduction from '../components/Introduction.astro';
-import Project from '../components/Project.astro';
+import Project, { ProjectType } from '../components/Project.astro';
+import ProjectHeader, { ProjectHeaderType } from '../components/ProjectHeader.astro';
 import Pssst from '../components/Pssst.astro';
 import Layout from '../layouts/Layout.astro';
-import { projects } from '../projects';
+import projectItems from '../projects';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Traczyk">
   <main class="">
     <Introduction />
 
@@ -16,9 +17,12 @@ import { projects } from '../projects';
     </div>
     <div id="#projects">
       {
-        projects &&
-          projects.map((project) => {
-            return <Project {...project} />;
+        projectItems &&
+          projectItems.map((item) => {
+            if ((item as ProjectHeaderType).text) {
+              return <ProjectHeader {...(item as ProjectHeaderType)} />;
+            }
+            return <Project {...(item as ProjectType)} />;
           })
       }
     </div>

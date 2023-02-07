@@ -18,7 +18,7 @@ const tagColors = {
 
 type Tag = keyof typeof tagColors;
 
-export type Project = {
+export type ProjectType = {
   title: string;
   description: string;
   tags: Tag[]; // todo: enumerate
@@ -27,7 +27,7 @@ export type Project = {
   demo?: string;
 };
 
-type Props = Project;
+type Props = ProjectType;
 
 const { title, description, tags, previews, code, demo }: Props = Astro.props;
 ---

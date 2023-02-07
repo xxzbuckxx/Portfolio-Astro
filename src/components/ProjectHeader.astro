@@ -1,13 +1,15 @@
 ---
-export type ProjectHeader = {
+export type ProjectHeaderType = {
   text: string;
 };
 
-type Props = ProjectHeader;
+type Props = ProjectHeaderType;
 
 const { text }: Props = Astro.props;
 ---
 
-<h4 class="text-gray">
-  {text}
-</h4>
+<div class="flex items-center justify-center py-10">
+  <h4 class="text-gray w-5/6 text-center text-3xl">
+    {text}
+  </h4>
+</div>
