@@ -1,36 +1,34 @@
 ---
+import iconEmail from '../assets/icons/email.svg';
+import iconGithub from '../assets/icons/github.svg';
+import iconLinkedIn from '../assets/icons/linkedin.svg';
+import iconArrow from '../assets/icons/arrow.svg';
 
-import iconEmail from "../assets/icons/email.svg"
-import iconGithub from "../assets/icons/github.svg"
-import iconLinkedIn from "../assets/icons/linkedin.svg"
-import iconArrow from "../assets/icons/arrow.svg"
-
-import meImg from "../assets/images/me-wide.jpg"
-
+import meImg from '../assets/images/me-wide.jpg';
 ---
 
-<div class="flex justify-between items-start">
-  <div class="flex flex-col"> 
+<div class="flex items-start justify-between">
+  <div class="flex flex-col">
     <div>
       <h2 class="text-5xl font-bold">Hello,</h2>
       <h2 class="text-5xl font-bold">I'm Zack Traczyk</h2>
     </div>
 
-    <div class="h-8"></div> 
+    <div class="h-8"></div>
 
     <div class="md:w-[21rem]">
-      <p class="text-xl text-gray">
+      <p class="text-gray text-xl">
         I'm a software engineer and a computer science student at the
         <b>University of California Santa Cruz</b>.
       </p>
-      <div class='h-10'></div>
-      <p class="text-xl text-gray"><i>Banana Slugs!</i></p>
+      <div class="h-10"></div>
+      <p class="text-gray text-xl"><i>Banana Slugs!</i></p>
     </div>
 
-    <div class="h-4"></div> 
+    <div class="h-4"></div>
 
-    <div class='flex align-center justify-between md:flex-col gap-5'>
-      <div class="flex gap-3 -ml-1">
+    <div class="flex justify-between gap-5 md:flex-col">
+      <div class="-ml-1 flex gap-3">
         <a href="mailto:me@zacktraczyk.com">
           <img class="w-10" src={iconEmail} alt="Email logo" />
         </a>
@@ -44,7 +42,6 @@ import meImg from "../assets/images/me-wide.jpg"
 
       <a href="#projects"><img class="w-10 rotate-90" src={iconArrow} alt="arrow" /></a>
     </div>
-
   </div>
-  <img class="hidden md:block w-[17rem] object-contain" src={meImg}>
+  <img class="hidden w-[17rem] object-contain md:block" src={meImg} />
 </div>
