@@ -47,7 +47,7 @@ const { title, description, tags, previews, code, demo }: Props = Astro.props;
   <!-- images -->
   {
     previews && (
-      <div class="my-3 flex flex-wrap">
+      <div class="my-3 flex w-auto overflow-x-scroll">
         {previews.map((preview) => {
           return <img class="h-40" src={preview} alt="" />;
         })}
@@ -83,5 +83,5 @@ const { title, description, tags, previews, code, demo }: Props = Astro.props;
   </div>
 
   <!-- description -->
-  <p class="text-gray text-lg">{description}</p>
+  <p class="text-lg text-gray">{description}</p>
 </div>
