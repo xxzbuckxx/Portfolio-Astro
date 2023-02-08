@@ -12,8 +12,8 @@ import bmDamage from './assets/images/project-previews/BM-damage.jpg';
 // Boid Simulation
 import boidDebug from './assets/images/project-previews/BOIDS-Single-Boid-Debug.gif';
 import boidFog from './assets/images/project-previews/BOIDS-Fog.gif';
-import boidUi from './assets/images/project-previews/Boids-UI.jpg';
-import boidOcean from './assets/images/project-previews/Boids-Ocean.gif';
+import boidUi from './assets/images/project-previews/BOIDS-UI.jpg';
+import boidOcean from './assets/images/project-previews/BOIDS-Ocean.gif';
 
 // Sorting Algorithms
 import sortingWriteup from './assets/images/project-previews/SORTING-writeup.jpg';
