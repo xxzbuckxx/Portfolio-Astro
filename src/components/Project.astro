@@ -32,11 +32,11 @@ type Props = ProjectType;
 const { title, description, tags, previews, code, demo }: Props = Astro.props;
 ---
 
-<div class="flex flex-col gap-3 py-10">
+<div class="flex flex-col gap-2 py-10">
   <h3 class="text-4xl font-bold">{title}</h3>
 
   <!-- tags -->
-  <ul class="flex gap-3">
+  <ul class="flex flex-wrap gap-3">
     {
       tags.map((tag) => {
         return <li class={`rounded-xl border-2 px-5 text-sm ${tagColors[tag]}`}>{`#${tag}`}</li>;
@@ -45,21 +45,22 @@ const { title, description, tags, previews, code, demo }: Props = Astro.props;
   </ul>
 
   <!-- images -->
-  <div class="flex">
-    {
-      previews &&
-        previews.map((preview) => {
+  {
+    previews && (
+      <div class="my-3 flex flex-wrap">
+        {previews.map((preview) => {
           return <img class="h-40" src={preview} alt="" />;
-        })
-    }
-  </div>
+        })}
+      </div>
+    )
+  }
 
   <!-- view or demo -->
-  <div class="flex gap-3">
+  <div class="flex flex-wrap gap-3">
     {
       code && (
         <a
-          href="https://github.com/xxzbuckxx/Blob-Mob"
+          href={code}
           target="_blank"
           class="flex items-center gap-3 rounded-2xl border-2 p-3 py-1"
         >
@@ -71,7 +72,7 @@ const { title, description, tags, previews, code, demo }: Props = Astro.props;
     {
       demo && (
         <a
-          href="https://xxzbuckxx.github.io/Blob-Mob/"
+          href={demo}
           target="_blank"
           class="border-accent flex items-center gap-3 rounded-2xl border-2 p-3 py-1"
         >

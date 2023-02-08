@@ -7,7 +7,7 @@ import iconArrow from '../assets/icons/arrow.svg';
 import meImg from '../assets/images/me-wide.jpg';
 ---
 
-<div class="flex w-full items-start justify-between">
+<div class="flex w-full flex-col items-center justify-between md:flex-row md:items-start">
   <div class="flex flex-col">
     <div>
       <h2 class="text-5xl font-bold">Hello,</h2>
@@ -44,5 +44,5 @@ import meImg from '../assets/images/me-wide.jpg';
       >
     </div>
   </div>
-  <img class="hidden w-[17rem] object-contain md:block" src={meImg} alt="" />
+  <img class="w-full object-contain pt-10 md:w-[17rem] md:p-0" src={meImg} alt="" />
 </div>

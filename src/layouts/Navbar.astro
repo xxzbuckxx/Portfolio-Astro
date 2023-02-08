@@ -2,11 +2,13 @@
 import ZTLogo from '../assets/icons/personal-logo.svg';
 ---
 
-<div class="m-auto flex w-full max-w-4xl items-center justify-between p-10">
-  <a href="./">
+<div
+  class="m-auto flex flex-col items-center justify-between gap-10 p-10 pb-0 md:max-w-4xl md:flex-row md:pb-10"
+>
+  <a class="hidden md:block" href="./">
     <img class="w-10" src={ZTLogo} alt="Zack Traczyk personal logo" />
   </a>
-  <ul class="flex gap-10 md:justify-between md:text-xl">
+  <ul class="flex w-full justify-between md:w-80 md:text-xl">
     <a href="./" class="font-bold">
       <li>Home</li>
     </a>
