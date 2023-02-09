@@ -10,13 +10,13 @@ import ZTLogo from '../assets/icons/personal-logo.svg';
   </a>
   <ul class="flex w-full justify-between md:w-80 md:text-xl">
     <li>
-      <a href="/Portfolio-Astro" class="font-bold"> Home</a>
+      <a href={`${import.meta.env.BASE_URL}`} class="font-bold"> Home</a>
     </li>
     <li>
-      <a href="/Portfolio-Astro/#projects" class="font-bold"> Projects</a>
+      <a href={`${import.meta.env.BASE_URL}#projects`} class="font-bold"> Projects</a>
     </li>
     <li>
-      <a href="/Portfolio-Astro/about" class="font-bold"> About Me</a>
+      <a href={`${import.meta.env.BASE_URL}about`} class="font-bold"> About Me</a>
     </li>
   </ul>
 </div>
