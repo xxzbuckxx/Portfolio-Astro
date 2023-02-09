@@ -1,10 +1,11 @@
 ---
+import { Image } from '@astrojs/image/components';
 import iconEmail from '../assets/icons/email.svg';
 import iconGithub from '../assets/icons/github.svg';
 import iconLinkedIn from '../assets/icons/linkedin.svg';
 import iconArrow from '../assets/icons/arrow.svg';
 
-import meImg from '../assets/images/me.webp';
+import meImg from '../assets/images/me.jpg';
 ---
 
 <div class="flex w-full flex-col items-center justify-between md:flex-row md:items-start">
@@ -44,5 +45,12 @@ import meImg from '../assets/images/me.webp';
       >
     </div>
   </div>
-  <img class="w-full object-contain pt-10 md:w-[17rem] md:p-0" src={meImg} alt="" />
+  <Image
+    src={meImg}
+    alt=""
+    fit="contain"
+    format="webp"
+    aspectRatio={'5:7'}
+    class="w-full object-contain pt-10 md:w-[18rem] md:p-0"
+  />
 </div>

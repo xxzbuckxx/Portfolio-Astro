@@ -7,7 +7,7 @@ module.exports = {
         sans: ['Lato', 'sans-serif'],
       },
       colors: {
-        gray: '#7B7B7B',
+        gray: '#595959',
         accent: '#FF9E44',
         link: '#2188fe',
       },

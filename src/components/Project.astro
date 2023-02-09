@@ -1,4 +1,6 @@
 ---
+import { Image } from '@astrojs/image/components';
+import type { ImageMetadata } from '@astrojs/image/dist/vite-plugin-astro-image';
 import iconGithub from '../assets/icons/github-black.svg';
 
 const tagColors = {
@@ -22,7 +24,7 @@ export type ProjectType = {
   title: string;
   description: string;
   tags: Tag[]; // todo: enumerate
-  previews?: string[]; // todo: list of images to display
+  previews?: ImageMetadata[]; // todo: list of images to display
   code?: string;
   demo?: string;
 };
@@ -49,7 +51,7 @@ const { title, description, tags, previews, code, demo }: Props = Astro.props;
     previews && (
       <div class="my-3 flex w-auto overflow-x-scroll">
         {previews.map((preview) => {
-          return <img class="h-40" src={preview} alt="" />;
+          return <Image src={preview} alt="" fit="contain" format="webp" class="h-40 w-fit" />;
         })}
       </div>
     )
