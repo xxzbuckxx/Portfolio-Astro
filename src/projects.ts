@@ -5,26 +5,26 @@ import type { ProjectHeaderType } from './components/ProjectHeader.astro';
 import underDashboard from './assets/images/project-previews/UNDER-Dashboard.gif';
 
 // Blob Mob
-import bmTitle from './assets/images/project-previews/BM-title.jpg';
-import bmTutorial from './assets/images/project-previews/BM-tutorial.jpg';
-import bmDamage from './assets/images/project-previews/BM-damage.jpg';
+import bmTitle from './assets/images/project-previews/BM-title.webp';
+import bmTutorial from './assets/images/project-previews/BM-tutorial.webp';
+import bmDamage from './assets/images/project-previews/BM-damage.webp';
 
 // Boid Simulation
 import boidDebug from './assets/images/project-previews/BOIDS-Single-Boid-Debug.gif';
 import boidFog from './assets/images/project-previews/BOIDS-Fog.gif';
-import boidUi from './assets/images/project-previews/BOIDS-UI.jpg';
+import boidUi from './assets/images/project-previews/BOIDS-UI.webp';
 import boidOcean from './assets/images/project-previews/BOIDS-Ocean.gif';
 
 // Sorting Algorithms
-import sortingWriteup from './assets/images/project-previews/SORTING-writeup.jpg';
-import sortingWriteupGraph from './assets/images/project-previews/SORTING-writeup-graph.jpg';
-import sortingComparisonGraph from './assets/images/project-previews/SORTING-comparison-graph.jpg';
+import sortingWriteup from './assets/images/project-previews/SORTING-writeup.webp';
+import sortingWriteupGraph from './assets/images/project-previews/SORTING-writeup-graph.webp';
+import sortingComparisonGraph from './assets/images/project-previews/SORTING-comparison-graph.webp';
 
 // Ralph's Space Quest
-import rsqTitle from './assets/images/project-previews/RSQ-Title.jpg';
-import rsqLevelSelect from './assets/images/project-previews/RSQ-Menu.jpg';
-import rsqLevel from './assets/images/project-previews/RSQ-Carrot-Exp.jpg';
-import rsqBoss from './assets/images/project-previews/RSQ-Boss-Fight.jpg';
+import rsqTitle from './assets/images/project-previews/RSQ-Title.webp';
+import rsqLevelSelect from './assets/images/project-previews/RSQ-Menu.webp';
+import rsqLevel from './assets/images/project-previews/RSQ-Carrot-Exp.webp';
+import rsqBoss from './assets/images/project-previews/RSQ-Boss-Fight.webp';
 
 const projectItems: Array<ProjectType | ProjectHeaderType> = [
   {
