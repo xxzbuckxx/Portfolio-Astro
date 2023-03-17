@@ -31,6 +31,11 @@ const projectItems: Array<ProjectType | ProjectHeaderType> = [
     text: 'Here are some recent projects I have been working on. Lately I have been focused on learning React.',
   },
   {
+    title: 'SlugFit',
+    tags: ['fullstack', 'nodejs', 'typescript', 'react-native', 'tailwind', 'supabase'],
+    description: 'A React Native weightlifting app.',
+  },
+  {
     title: 'Under.io Metric System',
     tags: ['fullstack', 'nodejs', 'typescript', 'react', 'aws'],
     previews: [underDashboard],
