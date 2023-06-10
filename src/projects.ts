@@ -14,6 +14,7 @@ import boidDebug from './assets/images/project-previews/BOIDS-Single-Boid-Debug.
 import boidFog from './assets/images/project-previews/BOIDS-Fog.gif';
 import boidUi from './assets/images/project-previews/BOIDS-UI.jpg';
 import boidOcean from './assets/images/project-previews/BOIDS-Ocean.gif';
+import boidDemo from './assets/images/project-previews/BOIDS-Holographic-Demo.gif';
 
 // Sorting Algorithms
 import sortingWriteup from './assets/images/project-previews/SORTING-writeup.jpg';
@@ -42,7 +43,7 @@ const projectItems: Array<ProjectType | ProjectHeaderType> = [
     tags: ['fullstack', 'nodejs', 'typescript', 'react', 'firebase'],
     previews: [bmTitle, bmTutorial, bmDamage],
     code: 'https://github.com/xxzbuckxx/Blob-Mob',
-    demo: 'https://xxzbuckxx.github.io/Blob-Mob/',
+    demo: 'https://blob-mob.vercel.app/',
     description:
       'A web game I designed with a global leaderboard, an upgrade shop, and account functionality to save progress.',
   },
@@ -52,7 +53,7 @@ const projectItems: Array<ProjectType | ProjectHeaderType> = [
   {
     title: 'Flocking Simulation',
     tags: ['nodejs', 'typescript', 'threejs'],
-    previews: [boidDebug, boidFog, boidUi, boidOcean],
+    previews: [boidDemo, boidDebug, boidFog, boidUi, boidOcean],
     code: 'https://github.com/xxzbuckxx/Boid-Simulation',
     demo: 'https://xxzbuckxx.github.io/Boid-Simulation/',
     description:
