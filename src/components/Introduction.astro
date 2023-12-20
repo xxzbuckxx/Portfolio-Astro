@@ -8,49 +8,52 @@ import iconArrow from '../assets/icons/arrow.svg';
 import meImg from '../assets/images/me.jpg';
 ---
 
-<div class="flex w-full flex-col items-center justify-between md:flex-row md:items-start">
-  <div class="flex flex-col">
-    <div>
-      <h2 class="text-5xl font-bold">Hello,</h2>
-      <h2 class="text-5xl font-bold">I'm Zack Traczyk</h2>
-    </div>
-
-    <div class="h-8"></div>
-
-    <div class="md:w-[21rem]">
-      <p class="text-xl text-gray">
-        I'm a software engineer and a computer science student at the
-        <b>University of California Santa Cruz</b>.
-      </p>
-      <div class="h-10"></div>
-      <p class="text-xl text-gray"><i>Go Banana Slugs!</i></p>
-    </div>
-
-    <div class="h-4"></div>
-
-    <div class="flex justify-between gap-5 md:flex-col">
-      <div class="-ml-1 flex gap-3">
-        <a href="mailto:me@zacktraczyk.com">
-          <img class="w-10" src={iconEmail} alt="Email logo" />
-        </a>
-        <a href="https://github.com/xxzbuckxx">
-          <img class="w-10" src={iconGithub} alt="Github logo" />
-        </a>
-        <a href="https://www.linkedin.com/in/zachary-traczyk-140b541b2">
-          <img class="w-10" src={iconLinkedIn} alt="Linkedin Logo" />
-        </a>
+<div class="flex h-[50rem] items-center justify-center">
+  <div class="flex w-full flex-row items-start justify-between">
+    <div class="flex flex-col">
+      <div>
+        <h2 class="text-5xl font-bold">Hello,</h2>
+        <h2 class="text-5xl font-bold">I'm Zack Traczyk</h2>
       </div>
 
-      <a href="#projects"><img class="w-10 rotate-90" src={iconArrow} alt="Scroll to Projects" /></a
-      >
+      <div class="h-8"></div>
+
+      <div class="md:w-[21rem]">
+        <p class="text-xl text-gray">
+          I'm a software engineer and a computer science student at the
+          <b>University of California Santa Cruz</b>.
+        </p>
+        <div class="h-10"></div>
+        <p class="text-xl text-gray"><i>Go Banana Slugs!</i></p>
+      </div>
+
+      <div class="h-4"></div>
+
+      <div class="flex justify-between gap-5 md:flex-col">
+        <div class="-ml-1 flex gap-3">
+          <a href="mailto:me@zacktraczyk.com">
+            <img class="w-10" src={iconEmail} alt="Email logo" />
+          </a>
+          <a href="https://github.com/zacktraczyk">
+            <img class="w-10" src={iconGithub} alt="Github logo" />
+          </a>
+          <a href="https://www.linkedin.com/in/zack-traczyk/">
+            <img class="w-10" src={iconLinkedIn} alt="Linkedin Logo" />
+          </a>
+        </div>
+
+        <a href="#projects">
+          <img class="w-10 rotate-90" src={iconArrow} alt="Scroll to Projects" />
+        </a>
+      </div>
     </div>
+    <Image
+      src={meImg}
+      alt=""
+      fit="contain"
+      format="webp"
+      aspectRatio={'5:7'}
+      class="hidden w-[18rem] rounded-lg object-contain md:block"
+    />
   </div>
-  <Image
-    src={meImg}
-    alt=""
-    fit="contain"
-    format="webp"
-    aspectRatio={'5:7'}
-    class="w-full object-contain mt-20 md:w-[18rem] md:m-0 rounded-lg"
-  />
 </div>

@@ -3,27 +3,28 @@ import { Image } from '@astrojs/image/components';
 import type { ImageMetadata } from '@astrojs/image/dist/vite-plugin-astro-image';
 import iconGithub from '../assets/icons/github-black.svg';
 
-const tagColors = {
-  fullstack: 'text-[#fc69ff] border-[#fc69ff]',
-  nodejs: 'text-[#2CE58C] border-[#2CE58C]',
-  typescript: 'text-[#2194FE] border-[#2194FE]',
-  react: 'text-[#3ADBFE] border-[#3ADBFE]',
-  aws: 'text-[#E9C60F] border-[#E9C60F]',
-  firebase: 'text-[#e9780f] border-[#e9780f]',
-  threejs: 'text-[#FF99BE] border-[#FF99BE]',
-  c: 'text-[#e7d943] border-[#e7d943]',
-  bash: 'text-[#000] border-[#000]',
-  latex: 'text-[#1eb426] border-[#1eb426]',
-  gm2: 'text-[#68d951] border-[#68d951]',
-  python: 'text-[#d23ce3] border-[#d23ce3]',
-};
+// const tagColors = {
+//   fullstack: 'text-[#fc69ff] border-[#fc69ff]',
+//   nodejs: 'text-[#2CE58C] border-[#2CE58C]',
+//   typescript: 'text-[#2194FE] border-[#2194FE]',
+//   react: 'text-[#3ADBFE] border-[#3ADBFE]',
+//   aws: 'text-[#E9C60F] border-[#E9C60F]',
+//   firebase: 'text-[#e9780f] border-[#e9780f]',
+//   threejs: 'text-[#FF99BE] border-[#FF99BE]',
+//   c: 'text-[#e7d943] border-[#e7d943]',
+//   bash: 'text-[#000] border-[#000]',
+//   latex: 'text-[#1eb426] border-[#1eb426]',
+//   gm2: 'text-[#68d951] border-[#68d951]',
+//   python: 'text-[#d23ce3] border-[#d23ce3]',
+// };
 
-type Tag = keyof typeof tagColors;
+// type Tag = keyof typeof tagColors;
 
 export type ProjectType = {
   title: string;
   description: string;
-  tags: Tag[]; // todo: enumerate
+  technologies: string[];
+  // tags: Tag[]; // todo: enumerate
   previews?: ImageMetadata[]; // todo: list of images to display
   code?: string;
   demo?: string;
@@ -31,22 +32,12 @@ export type ProjectType = {
 
 type Props = ProjectType;
 
-const { title, description, tags, previews, code, demo }: Props = Astro.props;
+const { title, description, technologies, previews, code, demo }: Props = Astro.props;
 ---
 
-<div class="flex flex-col gap-2 py-10">
+<div class="flex flex-col gap-5">
   <h3 class="text-4xl font-bold">{title}</h3>
 
-  <!-- tags -->
-  <ul class="flex flex-wrap gap-3">
-    {
-      tags.map((tag) => {
-        return <li class={`rounded-xl border-2 px-5 text-sm ${tagColors[tag]}`}>{`#${tag}`}</li>;
-      })
-    }
-  </ul>
-
-  <!-- images -->
   {
     previews && (
       <div class="my-3 flex w-auto overflow-x-scroll">
@@ -57,7 +48,6 @@ const { title, description, tags, previews, code, demo }: Props = Astro.props;
     )
   }
 
-  <!-- view or demo -->
   <div class="flex flex-wrap gap-3">
     {
       code && (
@@ -76,14 +66,27 @@ const { title, description, tags, previews, code, demo }: Props = Astro.props;
         <a
           href={demo}
           target="_blank"
-          class="border-accent flex items-center gap-3 rounded-2xl border-2 p-3 py-1"
+          class="flex items-center gap-3 rounded-2xl border-2 border-accent p-3 py-1"
         >
-          <p class="text-accent text-lg font-bold">View Demo</p>
+          <p class="text-lg font-bold text-accent">View Demo</p>
         </a>
       )
     }
   </div>
 
-  <!-- description -->
-  <p class="text-gray text-lg">{description}</p>
+  <div class="space-y-2">
+    <h3 class="text-xl font-bold">Description</h3>
+    <p class="text-lg text-gray">{description}</p>
+  </div>
+
+  <div class="space-y-2">
+    <h3 class="text-xl font-bold">Technologies</h3>
+    <ul class="">
+      {
+        technologies.map((tech) => {
+          return <li class="ml-10 list-disc text-sm capitalize">{tech}</li>;
+        })
+      }
+    </ul>
+  </div>
 </div>
