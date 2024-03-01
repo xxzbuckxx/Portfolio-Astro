@@ -1,6 +1,17 @@
 import type { ProjectType } from './components/Project.astro';
 import type { ProjectHeaderType } from './components/ProjectHeader.astro';
 
+// SlugPath
+import slugPathHeader from './assets/images/project-previews/SLUGPATH-Header.jpg';
+import slugPathLanding from './assets/images/project-previews/SLUGPATH-Landing.jpg';
+import slugPathPlanner from './assets/images/project-previews/SLUGPATH-Planner.jpg';
+
+// CruzHacks
+import cruzHacksStatistics from './assets/images/project-previews/CRUZHACKS-Admin-Statistics.jpg';
+import cruzHacksApplication from './assets/images/project-previews/CRUZHACKS-Application.jpg';
+import cruzHacksHomepage from './assets/images/project-previews/CRUZHACKS-Homepage.jpg';
+import cruzHacksSpeakers from './assets/images/project-previews/CRUZHACKS-Speakers.jpg';
+
 // StudentStay
 import studentStayHomepage from './assets/images/project-previews/STUDENTSTAY-Homepage.jpg';
 import studentStayMap from './assets/images/project-previews/STUDENTSTAY-Map.jpg';
@@ -38,6 +49,23 @@ import rsqBoss from './assets/images/project-previews/RSQ-Boss-Fight.jpg';
 
 const projectItems: Array<ProjectType | ProjectHeaderType> = [
   {
+    title: 'SlugPath',
+    technologies: ['fullstack', 'nodejs', 'typescript', 'nextjs', 'postgres', 'tailwindcss'],
+    previews: [slugPathHeader, slugPathPlanner, slugPathLanding],
+    site: 'https://slugpath.com/',
+    code: 'https://github.com/SlugPath',
+    description:
+      "SlugPath is a webapp I am currently developing with other students at UCSC. It's a tool to help students plan their academic careers. I have been active in creating a landing page and refreshing the design of the platform.",
+  },
+  {
+    title: 'CruzHacks 2024',
+    technologies: ['fullstack', 'nodejs', 'typescript', 'react', 'firebase', 'tailwindcss'],
+    previews: [cruzHacksHomepage, cruzHacksApplication, cruzHacksSpeakers, cruzHacksStatistics],
+    site: 'https://cruzhacks.com/',
+    description:
+      'As lead engineer for CruzHacks in 2024, I was responsible for the development of the landing page and event tooling for the 700+ hackathon applicants. I worked with a team of 5 engineers to reskin the website, create a new registration system, and implement a new admin dashboard and user flow.',
+  },
+  {
     title: 'StudentStay',
     technologies: [
       'fullstack',
@@ -68,7 +96,7 @@ const projectItems: Array<ProjectType | ProjectHeaderType> = [
     technologies: ['nodejs', 'typescript', 'threejs'],
     previews: [boidDemo, boidDebug, boidFog, boidUi, boidOcean],
     code: 'https://github.com/zacktraczyk/Boid-Simulation',
-    demo: 'https://zacktraczyk.github.io/Boid-Simulation/',
+    site: 'https://zacktraczyk.github.io/Boid-Simulation/',
     description:
       'This flocking simulation was presented at the Digital Scholarship Symposium at University of California on May 25th, 2023. Using a holographic display I implemented Boids, an algorithm that simulates flocking behavior. The project was written in Typescript using Three.js for rendering.',
   },
@@ -77,17 +105,17 @@ const projectItems: Array<ProjectType | ProjectHeaderType> = [
     technologies: ['fullstack', 'nodejs', 'typescript', 'react', 'firebase'],
     previews: [bmTitle, bmTutorial, bmDamage],
     code: 'https://github.com/zacktraczyk/Blob-Mob',
-    demo: 'https://blob-mob.vercel.app/',
+    site: 'https://blob-mob.vercel.app/',
     description:
       'Blob Mob is a web game I designed with a global leaderboard, an upgrade shop, and account functionality. The core of the game is made in Typescript while the UI elments are made in React.',
   },
   {
     title: "Ralph's Space Quest",
     technologies: ['GameMaker Studio 2'],
-    demo: 'https://xxzbuckxx.itch.io/ralphs-space-quest-demo',
+    site: 'https://xxzbuckxx.itch.io/ralphs-space-quest-demo',
     previews: [rsqTitle, rsqLevelSelect, rsqLevel, rsqBoss],
     description:
-      '"Ralph\'s Space Quest" is a demo 2d-platformer shooter set on an extraterrestrial planet. The game contains a level select, a single demo level, and a boss fight. I created the majority of the assets only outsourcing the background art.',
+      '"Ralph\'s Space Quest" is a site 2d-platformer shooter set on an extraterrestrial planet. The game contains a level select, a single site level, and a boss fight. I created the majority of the assets only outsourcing the background art.',
   },
 ];
 
